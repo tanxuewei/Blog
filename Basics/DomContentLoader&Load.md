@@ -2,13 +2,11 @@
 
 ## 什么是DOMContentLoaded
 
-当HTML文档被加载和解析完成后，DOMContentLoaded事件就会被触发。不需要等待图片或其他资源加载完成。
-**相当于jQuery中的ready**
+当HTML文档被加载和解析完成后，DOMContentLoaded事件就会被触发。不需要等待图片或其他资源加载完成。（**相当于jQuery中的ready**）
 
 ## load
 
-DOM树构建完并且网页所依赖的所有资源都加载完成
-**相当于jQuery中的load**
+DOM树构建完并且网页所依赖的所有资源都加载完成（**相当于jQuery中的load**）
 
 ## 异步脚本
 
@@ -16,7 +14,8 @@ DOM树构建完并且网页所依赖的所有资源都加载完成
 
 **defer**：DOM、CSSOM构建完毕，开始执行defer，会按照顺序在DOMContentLoaded前依次执行
 
-**async**：异步下载，下载完就执行，肯定load之前，但是不一定在DOMContentLoaded前后
+**async**：异步下载，下载完就执行，肯定在load之前，但是不一定在DOMContentLoaded前后
 
-如果 script 无 src 属性，则 defer, async 会被忽略
+如果 script 无 src 属性，则 defer, async 会被忽略。
+
 动态添加的 script 标签隐含 async 属性。
