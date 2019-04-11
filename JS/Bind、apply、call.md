@@ -16,17 +16,17 @@ bind的特点：
 
 eg:
 
-(```)
-    var foo = {
-      value: 1
-    }
+```js
+var foo = {
+  value: 1
+}
 
-    function bar () {
-      console.log(this.value)
-    }
+function bar () {
+  console.log(this.value)
+}
 
-    bar.call(foo) // 1
-(```)
+bar.call(foo) // 1
+```
 
 call的特点：
 
@@ -36,16 +36,16 @@ call的特点：
 
 ### 模拟实现
 
-(```)
-    var foo = {
-      value: 1
-      bar: function () {
-        console.log(this.value)
-      }
-    }
+```js
+var foo = {
+  value: 1
+  bar: function () {
+    console.log(this.value)
+  }
+}
 
-    bar.call(foo) // 1
-(```)
+bar.call(foo) // 1
+```
 
 实现步骤
 
@@ -61,7 +61,7 @@ call的特点：
 
 最终实现：
 
-(```)
+```js
   Function.prototype.MyCall = function (context) {
     var context = context || window
     context.fn = this
@@ -74,28 +74,28 @@ call的特点：
     delete context.fn
     return result
   }
-(```)
+```
 
 ## apply
 
 apply和call类似，就是apply调用时传入的参数是一个数组
 
-(```)
-  Function.prototype.MyApply = function (context, arr) {
-    var context = context || window
-    context.fn = this
+```js
+Function.prototype.MyApply = function (context, arr) {
+  var context = context || window
+  context.fn = this
 
-    var result
-    if (!arr) {
-      result = context.fn()
-    } else {
-      var args = []
-      for (var i = 0, len = arr.length; i < len; i++) {
-        args.push('arr[' + i + ']')
-      }
-      result = eval('context.fn(' + args + ')')
+  var result
+  if (!arr) {
+    result = context.fn()
+  } else {
+    var args = []
+    for (var i = 0, len = arr.length; i < len; i++) {
+      args.push('arr[' + i + ']')
     }
-    delete context.fn
-    return result
+    result = eval('context.fn(' + args + ')')
   }
-(```)
+  delete context.fn
+  return result
+}
+```
