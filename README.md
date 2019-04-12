@@ -6,4 +6,4 @@ FE Blog
 
 ## JS
 
-[Bind、apply、call](https://github.com/tanxuewei/Blog/blob/master/JS/Bind%E3%80%81apply%E3%80%81call.md)
+[Bind、apply、call](./JS/Bind%E3%80%81apply%E3%80%81call.md)
