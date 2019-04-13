@@ -2,6 +2,8 @@
 
 FE Blog
 
+活在当下，敬畏未来
+
 ## Bacics
 
 ## JS

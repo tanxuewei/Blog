@@ -94,7 +94,6 @@ bar.call(foo) // 1
 ```
 
 ES6实现：
-
 ```js
   Function.prototype.MyCall6 = function (context) {
     var context = context || window
