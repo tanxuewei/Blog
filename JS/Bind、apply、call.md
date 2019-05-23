@@ -61,7 +61,7 @@ var foo = {
   }
 }
 
-bar.call(foo) // 1
+foo.bar() // 1
 ```
 
 实现步骤
