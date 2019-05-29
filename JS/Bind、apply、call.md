@@ -133,3 +133,7 @@ Function.prototype.MyApply = function (context, arr) {
   return result
 }
 ```
+
+本文原出处：
+[JavaScript深入之call和apply的模拟实现](https://github.com/mqyqingfeng/Blog/issues/11)
+[JavaScript深入之bind的模拟实现](https://github.com/mqyqingfeng/Blog/issues/12)
