@@ -138,7 +138,7 @@ Element.prototype.render = function () {
 
 var elem = Element({
   tagName: 'ul',
-  props: { "class": 'list' },
+  props: { class: 'list' },
   children: [
     Element({tagName: 'li', children: ['item1']}),
     Element({tagName: 'li', children: ['item2']})
