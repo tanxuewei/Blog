@@ -9,3 +9,7 @@ hasOwnProperty 对象本身拥有的属性
 
 call 后参数是1个1个列出来的
 apply 后参数是一个数组
+
+## setTimeout
+
+setTimeout(func, 1000) 会返回一个id，clearTimeout是根据这个去清除的。
