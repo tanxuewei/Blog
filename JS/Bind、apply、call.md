@@ -134,6 +134,23 @@ Function.prototype.MyApply = function (context, arr) {
 }
 ```
 
+## apply 和 call用途
+
+1、改变this指向
+
+2、Function.prototype.bind
+
+3、借用其他对象的方法
+
+* 借用构造函数: 实现继承
+
+* 操作 arguments: 借用Array.prototype.slice.call(arguments, 3)
+
+```js
+Math.max.apply(null, [1, 2, 5, 4])
+// 正常用法是,Math.max(1, 2, 5, 4), 本来是要传多个对象，但是这样传一个数组就可以解决
+```
+
 本文原出处：
 [JavaScript深入之call和apply的模拟实现](https://github.com/mqyqingfeng/Blog/issues/11)
 [JavaScript深入之bind的模拟实现](https://github.com/mqyqingfeng/Blog/issues/12)
