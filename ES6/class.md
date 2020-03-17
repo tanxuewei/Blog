@@ -59,5 +59,5 @@ console.log(child)
 
 ## 其他
 
-proxy:
+proxy: 拦截，外界对这个对象的访问都会到这里
 reflect
